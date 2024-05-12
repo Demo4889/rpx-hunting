@@ -2,6 +2,25 @@ Config = {
     ButcherNPC = "S_M_M_UNIBUTCHERS_01", -- NPC model for butcher
     ThirdEye = true, -- Set to false if you are not using third eye (meta_target) https://github.com/Demo4889/meta_target
 
+    CarcassQuality = {
+        [-1] = {
+            type = "Legendary",
+            multi = 4
+        },
+        [0] = {
+            type = 'Low',
+            multi = 1
+        },
+        [1] = {
+            type = 'Medium',
+            multi = 2
+        },
+        [2] = {
+            type = 'High',
+            multi = 3
+        },
+    },
+
     Butchers = { -- Butcher locations
         Rhodes = {
             coords = vec4(1297.385, -1277.616, 75.878, 149.676),
