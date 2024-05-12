@@ -1,5 +1,5 @@
-local ButcherBlips = {}
-local ButcherPeds = {}
+ButcherBlips = {}
+ButcherPeds = {}
 
 CreateThread(function()
     for _,butcher in pairs(Config.Butchers) do
@@ -29,7 +29,7 @@ CreateThread(function()
         SetRandomOutfitVariation(ped, true)
 
         if Config.ThirdEye then
-            exports["meta_target"]:addLocalEnt('rpx_butcher_target_'..ped, lang[Language].butcher, 'fas fa-paw', ped, 2.0, false, butcher.menuItems,{})
+            exports["meta_target"]:addLocalEnt('rpx_butcher_target_'..ped, lang[Language].butcher, 'fas fa-paw', ped, 5.0, false, butcher.menuItems,{})
         end
 
         table.insert(ButcherPeds, ped)
@@ -74,6 +74,13 @@ end
 
 ButcherAnimal = function()
     local animal = Holding(holding)
+    for _,ped in pairs(ButcherPeds) do
+        if IsPedMale(PlayerPedId()) then
+            exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_MALE', 'speech_params_force', 0)
+        else
+            exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_FEMALE', 'speech_params_force', 0)
+        end
+    end
     Wait(100)
     if animal ~= nil then
         if animal.meat ~= nil then
@@ -90,23 +97,15 @@ ButcherAnimal = function()
 
         local holdingAnimal = Citizen.InvokeNative(0xD806CD2A4F2C2996, PlayerPedId())
         DeleteEntity(holdingAnimal)
-    else
-        lib.notify({title = lang[Language].butcher, description = lang[Language].issueButcher, type = "error"})
-        return
     end
 end
 
 SellAnimal = function()
     local animal = Holding(holding)
     Wait(100)
-
-
-    print("returned animal to sell: "..json.encode(animal))
 end
 
 SellFur = function()
     local fur = Holding(holding)
     Wait(100)
-
-    print('player is choosing to sell the fur they are holding')
 end

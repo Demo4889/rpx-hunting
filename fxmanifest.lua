@@ -13,9 +13,13 @@ shared_scripts {
 	'shared/*.lua',
 }
 
-client_script 'client.lua'
+client_scripts {
+	'client.lua'
+}
 
-server_script 'server.lua'
+server_scripts {
+	'server.lua'
+}
 
 lua54 'yes'
 

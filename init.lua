@@ -10,9 +10,14 @@ Config = {
                     name = 'Open Shop',
                     label = 'Open Shop',
                     onSelect = function(targetData,itemData)
-                        for id, shop in pairs(Config.Butchers) do
-                            exports['rpx-inventory']:openInventory('shop', { type = 'Butcher' })
+                        for _,ped in pairs(ButcherPeds) do
+                            if IsPedMale(PlayerPedId()) then
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_MALE', 'speech_params_force', 0)
+                            else
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_FEMALE', 'speech_params_force', 0)
+                            end
                         end
+                        exports['rpx-inventory']:openInventory('shop', { type = 'Butcher' })
                     end,
                 },
                 {
@@ -45,6 +50,13 @@ Config = {
                     name = 'Open Shop',
                     label = 'Open Shop',
                     onSelect = function(targetData,itemData)
+                        for _,ped in pairs(ButcherPeds) do
+                            if IsPedMale(PlayerPedId()) then
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_MALE', 'speech_params_force', 0)
+                            else
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_FEMALE', 'speech_params_force', 0)
+                            end
+                        end
                         exports['rpx-inventory']:openInventory('shop', { type = 'Butcher' })
                     end,
                 },
@@ -78,6 +90,13 @@ Config = {
                     name = 'Open Shop',
                     label = 'Open Shop',
                     onSelect = function()
+                        for _,ped in pairs(ButcherPeds) do
+                            if IsPedMale(PlayerPedId()) then
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_MALE', 'speech_params_force', 0)
+                            else
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_FEMALE', 'speech_params_force', 0)
+                            end
+                        end
                         exports['rpx-inventory']:openInventory('shop', { type = 'Butcher' })
                     end,
                 },
@@ -111,6 +130,13 @@ Config = {
                     name = 'Open Shop',
                     label = 'Open Shop',
                     onSelect = function()
+                        for _,ped in pairs(ButcherPeds) do
+                            if IsPedMale(PlayerPedId()) then
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_MALE', 'speech_params_force', 0)
+                            else
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_FEMALE', 'speech_params_force', 0)
+                            end
+                        end
                         exports['rpx-inventory']:openInventory('shop', { type = 'Butcher' })
                     end,
                 },
@@ -143,7 +169,14 @@ Config = {
                 {
                     name = 'Open Shop',
                     label = 'Open Shop',
-                    onSelect = function(targetData,itemData)
+                    onSelect = function()
+                        for _,ped in pairs(ButcherPeds) do
+                            if IsPedMale(PlayerPedId()) then
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_MALE', 'speech_params_force', 0)
+                            else
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_FEMALE', 'speech_params_force', 0)
+                            end
+                        end
                         exports['rpx-inventory']:openInventory('shop', { type = 'Butcher' })
                     end,
                 },
@@ -176,7 +209,14 @@ Config = {
                 {
                     name = 'Open Shop',
                     label = 'Open Shop',
-                    onSelect = function(targetData,itemData)
+                    onSelect = function()
+                        for _,ped in pairs(ButcherPeds) do
+                            if IsPedMale(PlayerPedId()) then
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_MALE', 'speech_params_force', 0)
+                            else
+                                exports['rpx-smallresources']:AmbientSpeech(ped, '0475_U_M_M_VALBARTENDER_01', 'GREET_FEMALE', 'speech_params_force', 0)
+                            end
+                        end
                         exports['rpx-inventory']:openInventory('shop', { type = 'Butcher' })
                     end,
                 },
